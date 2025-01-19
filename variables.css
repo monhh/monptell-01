@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Valentina-Regular';
+    src: url('fonts/Valentina-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* ----------------------------------------------
+    color 
+    ---------------------------------------------- */
+    --color-light: #fefefe;
+    --color-light: #edece5;
+    --color-dark: #111;
+    --color-light-glare: #f4f3ef;
+    --color-dark-glare: #242022;
+    
+    --color-global-bg: var(--color-dark);
+    --color-global-text: var(--color-light);
+    --color-selection-bg: var(--color-dark);
+    --color-selection-text: var(--color-light);
+
+    /* Tema oscuro */
+    --color-bg: #121212; /* Fondo oscuro */
+    --color-text: #e4e4e4; /* Texto claro */
+    --color-border: #333; /* Bordes oscuros */
+    --color-white: #1e1e1e; /* Color de componentes blancos */
+    --color-muted: #aaa; /* Texto atenuado más claro */
+  
+    --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+
+
+    /* ----------------------------------------------
+    fonts
+    ------------------------------------------------ */
+    /* System UI fonts are those native to the operating system interface. They are highly legible and easy to read at small sizes, contains many font weights, and is ideal for UI elements. */
+    --ff-sans: system-ui, sans-serif;
+    /* Geometric Humanist typefaces are characterized by their clean, geometric forms and uniform stroke widths. These typefaces are often considered to be modern and sleek in appearance, and are often used for headlines and other display purposes. Futura is a famous example of this classification. */
+    --ff-headlines: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif; ;
+    /* Neo-Grotesque typefaces are a style of sans-serif that was developed in the late 19th and early 20th centuries and is characterized by its clean, geometric forms and uniform stroke widths. One of the most famous examples of a Neo-Grotesque typeface is Helvetica.*/
+    -ff-normal-text:Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    /* Slab Serif typefaces are characterized by the presence of thick, block-like serifs on the ends of each letterform. These serifs are usually unbracketed, meaning they do not have any curved or tapered transitions to the main stroke of the letter. */
+    --ff-serif: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
+    
+    /* fonts org  */
+    --font-accent: "Family","Georgia Pro",Georgia,"URW Bookman","URW Bookman L",serif;
+    --font-mono: "Roboto Mono",ui-monospace,monospace;
+    
+    --font-local-ligatures: "Valentina-Regular", serif; 
+    --font-logos: "Montserrat", sans-serif;
+    --font-base: "Nunito", sans-serif;
+
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+    --font-black: 900;
+
+    /* Kerning defines how letters are spaced.  */
+    --kerning: normal;
+    --kerning-tight: -0.04ch;
+    --kerning-loose: 0.1ch;
+    
+    /* ---------------------------------- 
+    gutter 
+    ---------------------------------- */
+    --gutter: var(--space-m);
+    --gutter-column: var(--gutter);
+    --gutter-row: var(--gutter);
+    
+    --gutter-wrapper-inline: var(--gutter);
+    --gutter-wrapper-inner-block: var(--gutter);
+    --gutter-wrapper-inner-inline: var(--gutter);
+
+
+    /* ---------------------------------- 
+    heading 
+    ---------------------------------- */
+    --heading-font-weight: var(--font-bold);
+    --heading-kerning: -0.015em;
+    --heading-line-height: var(--leading-fine);
+
+    /* ---------------------------------- 
+    leading (for line-height)
+    ---------------------------------- */
+    --leading: 1.4;
+    --leading-short: 1.3;
+    --leading-slim: 1.2;
+    --leading-fine: 1.1;
+    --leading-flat: 1;
+
+    /* ---------------------------------- 
+    size-step (for font-size) 
+    ---------------------------------- */
+    --size-step-8: clamp(2.3125rem,0.1313rem + 10.906vi,10.4375rem);
+    --size-step-7: clamp(2.0625rem,0.7706rem + 6.4597vi,6.875rem);
+    --size-step-6: clamp(1.8125rem,1.0742rem + 3.6913vi,4.5625rem);
+    --size-step-5: clamp(1.6875rem,1.2177rem + 2.349vi,3.4375rem);
+    --size-step-4: clamp(1.5625rem,1.2773rem + 1.4262vi,2.625rem);
+    --size-step-3: clamp(1.4375rem,1.2865rem + 0.755vi,2rem);
+    --size-step-2: clamp(1.3125rem,1.1951rem + 0.5872vi,1.75rem);
+    --size-step-1: clamp(1.1875rem,1.1036rem + 0.4195vi,1.5rem);
+    --size-step-0: clamp(1.0625rem,0.9954rem + 0.3356vi,1.3125rem);
+    --size-step--1: clamp(1rem,0.9664rem + 0.1678vi,1.125rem);
+    --size-step--2: clamp(0.875rem,0.8414rem + 0.1678vi,1rem);
+    --size-step--3: clamp(0.8125rem,0.7957rem + 0.0839vi,0.875rem);
+    --size-step--4: clamp(0.625rem,0.7043rem + -0.0839vi,0.6875rem);
+
+    /* ----------------------------------
+    space (for gutter, gap, margin)
+    ---------------------------------- */ 
+    --space-2xs: clamp(0.375rem,0.3414rem + 0.1678vi,0.5rem);
+    --space-xs: clamp(0.5625rem,0.5122rem + 0.2517vi,0.75rem);
+    --space-s: clamp(0.75rem,0.6829rem + 0.3356vi,1rem);
+    --space-m: clamp(1.125rem,1.0243rem + 0.5034vi,1.5rem);
+    --space-l: clamp(1.5rem,1.3658rem + 0.6711vi,2rem);
+    --space-xl: clamp(1.875rem,1.7072rem + 0.8389vi,2.5rem);
+    --space-2xl: clamp(3rem,2.7315rem + 1.3423vi,4rem);
+    --space-3xl: clamp(3.75rem,3.4144rem + 1.6779vi,5rem);
+    --space-4xl: clamp(5.625rem,5.1216rem + 2.5168vi,7.5rem);
+
+    --space-2xs-xs: clamp(0.375rem,0.2743rem + 0.5034vi,0.75rem);
+    --space-xs-s: clamp(0.5625rem,0.4451rem + 0.5872vi,1rem);
+    --space-s-m: clamp(0.75rem,0.5487rem + 1.0067vi,1.5rem);
+    --space-m-l: clamp(1.125rem,0.8901rem + 1.1745vi,2rem);
+    --space-l-xl: clamp(1.5rem,1.2315rem + 1.3423vi,2.5rem);
+    --space-xl-2xl: clamp(1.875rem,1.3045rem + 2.8523vi,4rem);
+    --space-2xl-3xl: clamp(3rem,2.4631rem + 2.6846vi,5rem);
+    --space-3xl-4xl: clamp(3.75rem,2.7433rem + 5.0336vi,7.5rem);
+    
+    --space-s-l: clamp(0.75rem,0.4144rem + 1.6779vi,2rem);
+    --space-l-3xl: clamp(1.5rem,0.5604rem + 4.698vw,5rem);
+
+    --space: 1rem; /* Escala modular base */
+    --space-small: calc(var(--space) / 2);
+    --space-large: calc(var(--space) * 2);
+
+    /* -------------------------------------------------- */
+    --radius: 0.33rem; /* Usar rem para unidades relativas */
+    
+    /* ----------------------------------
+    stroke (for border)
+    ---------------------------------- */ 
+    /* --stroke: 1px solid var(--stroke-color,currentColor); */
+    --stroke: 1px solid white;/* mio */
+    --stroke-color: var(--color-dark);
+    --stroke-mid: 1px solid var(--stroke-mid-color,var(--color-mid));
+    --stroke-weight-light: 1px;
+    --stroke-weight-medium: 3px;
+    --stroke-weight-heavy: 6px;
+
+    /* ----------------------------------
+    text 
+    ---------------------------------- */ 
+    --text-decoration-thickness: 2px;
+
+    --text-size-base: var(--size-step-0);
+    --text-size-lede: var(--size-step-1);
+    --text-size-meta: var(--size-step--1);
+    --text-size-heading-1: var(--size-step-5);
+    --text-size-heading-2: var(--size-step-4);
+    --text-size-heading-3: var(--size-step-3);
+    --text-size-heading-4: var(--size-step-2);
+    --text-size-prose: var(--text-size-base);
+
+    /* ----------------------------------
+    wrapper 
+    ---------------------------------- */
+    --wrapper-max-width: 1680px;
+    --wrapper-max-width: 1230px;
+    
+    /* ----------------------------------
+    (for  .flow>*+*)
+    ---------------------------------- */
+    --flow-space: var(--space-xs); 
+}

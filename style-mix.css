@@ -143,7 +143,10 @@ Card
     align-items: center;
     line-height: 1; /* adjust heights */
     padding: 0;
+
+    margin-block-start: var(--flow-space,1em);
 }
+
 .category-wrapper a {
     line-height: 1; /* adjust heights */
 }
@@ -241,3 +244,58 @@ Card
     opacity: 1;
     visibility: visible;
 }
+
+
+/* ! Gradient ======================================================================== */
+/* Clase base para gradientes animados */
+.gradient-base {
+    aspect-ratio: 380 / 430; /* Mantén la relación de aspecto */
+    height: auto; /* Altura ajustable según la relación */
+    width: 100%; /* Ancho del contenedor */
+    background-size: 200% 200%; /* Permite mover el gradiente en ambas direcciones */
+    background-position: 100% 100%; /* Posición inicial del gradiente */
+    animation: gradientAnimation 8s infinite alternate; /* Animación personalizada */
+
+        /* Adjust the duration as needed */
+    /* animation-duration: 5s;  */
+    /* Adjust the timing function as needed */
+    /* animation-timing-function: ease-in-out;  */
+    /* Adjust the iteration count as needed */
+    /* animation-iteration-count: infinite;  */
+}
+
+.deg11_3 {
+    --gradient-colors: linear-gradient(to top in oklch,
+    color-mix(in oklch, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%),
+        color-mix(in oklch, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%, oklch(79.27% 0.1709 70.67) 50%),
+        color-mix(in oklch, oklch(79.27% 0.1709 70.67) 50%, oklch(96.8% 0.21095439261133309 109.76923207652135) 50%) 80%
+    );
+    background-image: var(--gradient-colors);
+}
+
+.deg11_4 {
+    --gradient-colors: linear-gradient(to top in oklch,
+    color-mix(in oklch, oklch(18.22% 0 0) 50%, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%),
+        color-mix(in oklch, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%, oklch(79.27% 0.1709 70.67) 50%),
+        color-mix(in oklch, oklch(79.27% 0.1709 70.67) 50%, oklch(96.8% 0.21095439261133309 109.76923207652135) 50%) 80%
+    );
+    background-image: var(--gradient-colors);
+}
+
+/* Animación del gradiente */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+a img {
+    vertical-align: top; 
+  }
+  

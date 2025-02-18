@@ -122,6 +122,11 @@ Card
 }
 
 .card a {pointer-events: none;}
+
+/* !  */
+a img {
+    vertical-align: top; 
+}
   
 .card img {
     width: 100%;
@@ -181,7 +186,11 @@ Card
 
 /* ! Full-screen-Overlay-Navigation- =============== */
 .navigation {
-    position: fixed;
+    /* position: fixed; */
+    content: '';
+    position: absolute;
+    z-index: 2;
+
     top: 0; /* Altura de la barra de navegación */
     left: 0;
     width: 100%;
@@ -247,42 +256,31 @@ Card
 
 
 /* ! Gradient ======================================================================== */
-/* Clase base para gradientes animados */
+/* Mantén la relación de aspecto */
+/* height: auto; Altura ajustable según la relación */
+/* width: 100%; Ancho del contenedor */
+/* background-position: 100% 100%; background-size: 200% 200%;  Permite mover el gradiente en ambas direcciones */
+/* Posición inicial del gradiente */
+
 .gradient-base {
-    aspect-ratio: 380 / 430; /* Mantén la relación de aspecto */
-    height: auto; /* Altura ajustable según la relación */
-    width: 100%; /* Ancho del contenedor */
-    background-size: 200% 200%; /* Permite mover el gradiente en ambas direcciones */
-    background-position: 100% 100%; /* Posición inicial del gradiente */
-    animation: gradientAnimation 8s infinite alternate; /* Animación personalizada */
-
-        /* Adjust the duration as needed */
-    /* animation-duration: 5s;  */
-    /* Adjust the timing function as needed */
-    /* animation-timing-function: ease-in-out;  */
-    /* Adjust the iteration count as needed */
-    /* animation-iteration-count: infinite;  */
-}
-
-.deg11_3 {
-    --gradient-colors: linear-gradient(to top in oklch,
-    color-mix(in oklch, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%),
-        color-mix(in oklch, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%, oklch(79.27% 0.1709 70.67) 50%),
-        color-mix(in oklch, oklch(79.27% 0.1709 70.67) 50%, oklch(96.8% 0.21095439261133309 109.76923207652135) 50%) 80%
-    );
-    background-image: var(--gradient-colors);
+    position: relative;
+    aspect-ratio: 380 / 430; 
+    height: auto; 
+    width: 100%; 
+    background-size: 200% 200%; 
+    background-position: 100% 100%; 
+    animation: gradientAnimation 8s infinite alternate; 
 }
 
 .deg11_4 {
     --gradient-colors: linear-gradient(to top in oklch,
-    color-mix(in oklch, oklch(18.22% 0 0) 50%, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%),
+        color-mix(in oklch, oklch(18.22% 0 0) 50%, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%),
         color-mix(in oklch, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%, oklch(79.27% 0.1709 70.67) 50%),
-        color-mix(in oklch, oklch(79.27% 0.1709 70.67) 50%, oklch(96.8% 0.21095439261133309 109.76923207652135) 50%) 80%
+        color-mix(in oklch, oklch(79.27% 0.1709 70.67) 50%, oklch(96.8% 0.21095439261133309 109.76923207652135) 50%) 100%
     );
     background-image: var(--gradient-colors);
 }
 
-/* Animación del gradiente */
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 0%;
@@ -295,7 +293,63 @@ Card
     }
 }
 
-a img {
-    vertical-align: top; 
-  }
+/* * gradient DEEP ================================================================
+* ================================================================================= */
+.gradient_base_deep {
+    position: relative;
+    aspect-ratio: 380 / 430;
+    overflow: hidden;
+    /* 300%: Triplica la altura del gradiente (crea un área 3 veces más grande verticalmente)
+    Al tener 3 veces la altura visible, permite que el gradiente se "desplace" suavemente
+    Crea un "buffer" de color para evitar saltos bruscos durante la transición
+    Permite que los colores se mezclen antes de entrar/salir del área visible */
+    background-size: 100% 300%; 
+    background-position: 0% 100%;
+    animation: gradientAnimation_deep 9s 250ms infinite  alternate linear ; /* ease-in-out = cubic-bezier(0.42, 0, 0.58, 1);  */
+    /* Optimización de renderizado: */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+
+}
+
+.anim_deep {
+    --gradient-colors_deep: linear-gradient(to top in oklch,
+        oklch(62.8% 0.25768330773615683 29.2338851923426) 0%,    
+        color-mix(in oklch, oklch(62.8% 0.25768330773615683 29.2338851923426) 50%, oklch(79.27% 0.1709 70.67) 50%),
+        color-mix(in oklch, oklch(79.27% 0.1709 70.67) 50%, oklch(96.8% 0.21095439261133309 109.76923207652135) 50%) 100% 
+    );
+    background-image: var(--gradient-colors_deep);
+}
+
+.gradient_base_deep::before {
+    content: '';
+    position: absolute;
+    /* Crear un área más grande que el contenedor para el efecto de blur: 
+    Ancho total = 100% (contenedor) + 20% (izquierda) + 20% (derecha) = 140%
+    Alto total = 100% + 20% (arriba) + 20% (abajo) = 140% */
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background-image: var(--gradient-colors_deep);
+    filter: blur(40px);
+    animation: inherit;
+    mix-blend-mode: soft-light;
+    /* opacity: 0.9; */
+    z-index: 1;
+    /* Optimización de renderizado: */
+    will-change: transform, filter;
+}
+
+@keyframes gradientAnimation_deep {
+    0% {
+        background-position: 0% 100%; /* Rojo  */
+    }
+    60% {
+        background-position: 0% 60%; /* Naranja ? */
+    }
+    100% {
+        background-position: 0% 20%; 
+    }
+}
   

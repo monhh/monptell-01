@@ -1,0 +1,6 @@
+/* utilities/_spacing.css */
+.mt-20 { margin-top: 20px; }
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}

@@ -1,0 +1,14 @@
+/* Cluster components suit any groups of elements that differ in length and are liable to wrap.  */
+.cluster {
+    display: flex;
+    flex-direction: var(--cluster-direction,row);
+    justify-content: var(--cluster-horizontal-alignment,flex-start); /* main axis */
+    align-items: var(--cluster-vertical-alignment,center);/* cross axis */
+
+    flex-wrap: var(--cluster-wrap,wrap);
+    
+    column-gap: var(--cluster-column-gap,var(--gutter,var(--space-s-m)));
+    row-gap: var(--cluster-row-gap,var(--gutter,var(--space-s-m)));
+    
+    outline: 4px dashed green;
+}

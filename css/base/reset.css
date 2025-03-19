@@ -1,0 +1,63 @@
+html {
+    box-sizing: border-box;
+    text-size-adjust: none;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    /* debug ------------------ */
+    /* outline: 2px solid lime; */
+    /* background: orange; */
+}
+
+@media (min-width: 590px) {
+    :root {
+        --gutter: var(--space-xl);
+        /* --small-screen: 0; */
+    }
+}
+
+/* Exception-based styling ----------------------- */
+blockquote, body, dd, dl, figure, h1, h2, h3, h4, p {
+    margin-block-end: 0;
+}
+:where(body,h1,h2,h3,h4,p,figure,blockquote,dl,dd) {
+    margin-block: 0;
+}
+
+/* ul --------------------  */
+:is(ol,ul) {
+    margin-block-end: 0;
+}
+
+ul {
+    padding-inline-start: var(--global-ul-padding,1.75ch);
+    padding-inline-start: 1.75ch;
+}
+
+ul ::marker {
+    line-height: 1;
+}
+/* a --------------------  */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: var(--color-accent);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+::selection {
+    background: var(--color-selection-bg);
+    color: var(--color-selection-text);
+}
+
+svg {flex-shrink: 0;}
+
+[role=list][class], [role=tablist] {
+    list-style: none;
+    margin-block: 0;
+    padding: 0;
+}

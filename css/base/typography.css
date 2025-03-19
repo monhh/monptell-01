@@ -1,0 +1,30 @@
+/* h1, h2, h3, h4, h5, h6 */
+body {
+    font-family: var(--ff-sans);
+    font-size: var(--text-size-base);
+    line-height: var(--leading);
+
+    font-size-adjust: from-font;
+    font-feature-settings: "csp" on;
+    font-optical-sizing: auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--ff-sans);
+    font-feature-settings: "cpsp" on;
+    font-weight: var(--heading-font-weight,var(--font-bold));
+    letter-spacing: var(--heading-kerning,var(--kerning));
+    line-height: var(--heading-line-height,var(--leading-fine));
+    /* overflow-wrap: anywhere; */
+    text-wrap: balance;
+}
+h2 {
+    font-size: var(--text-size-heading-2);
+    max-width: var(--measure-s);
+}
+
+@media (min-width: 50em) {
+    h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: unset;
+    }
+}

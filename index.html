@@ -26,96 +26,105 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
     <!-- Styles -->
-    <link rel="stylesheet" href="variables.css">
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="style-mix.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Mon PTell</title>
 </head>
 <body>
     <header>
         <div class="wrapper">
             <nav class="navbar">
-            <div class="header_container">
-                <a href="#" class="logo">Mon PTell</a>
-                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 70" >
-                    <rect width="100" height="10" ></rect>
-                    <rect y="30" width="100" height="10" ></rect>
-                    <rect y="60" width="100" height="10" ></rect>
-                </svg>
-            </div>
+                <div class="header">
+                    <a href="#" class="header__logo">Mon PTell</a>
+                    <svg class="header__menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 70" >
+                        <rect width="100" height="10" ></rect>
+                        <rect y="30" width="100" height="10" ></rect>
+                        <rect y="60" width="100" height="10" ></rect>
+                    </svg>
+                </div>
 
-            <div class="navigation flow">
-                <a href="#">work in progress ...</a>
-                <!-- <a href="#">HOME</a>
-                <a href="#">ABOUT</a>
-                <a href="#">PROJECTS</a>
-                <a href="#">BLOG</a>
-                <a href="#">CUSTOMERS</a>
-                <a href="#">CONTACT</a> -->
-            </div>
+                <div class="overlay-nav flow">
+                    <a class="overlay-nav__link" href="#">work in progress ...</a>
+                    <!-- <a href="#">HOME</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">PROJECTS</a>
+                    <a href="#">BLOG</a>
+                    <a href="#">CUSTOMERS</a>
+                    <a href="#">CONTACT</a> -->
+                </div>
             </nav>
         </div>
     </header>
     
     <main>
         <div class="wrapper" >
-            <div class="grid" data-layout="thirds">
+            <div class="grid">
                 <article class="card ">
                     <a href="#">
-                        <div class="gradient_base_deep anim_deep"></div>
+                        <div class="gradient-block gradient-block__colors"></div>
                         <!-- <img src="./img/colors/red-380x430.jpg" alt="Imagen de ejemplo"> -->
-                    </a>
-                
+                    </a>              
                     <div class="card__content flow">
-                        <p class="category-wrapper">
-                            <a href="/category/css" class="category">Lorem</a>
+                        <p class="card__category">
+                            <a href="/category/css" >Lorem</a>
                         </p>
                         <h3 class="card__heading">
                             <a href="/blog/">Lorem ipsum dolor</a>
                         </h3>
-                        <p class="card__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor ipsum consequuntur repudiandae soluta dolore voluptas nihil corrupti ab cum reiciendis corporis, assumenda pariatur officia similique atque cumque officiis quisquam?
-                        Eius temporibus molestiae totam! </p>
+                        <p class="card__summary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor ipsum consequuntur repudiandae soluta dolore voluptas nihil corrupti ab cum reiciendis corporis, assumenda pariatur officia similique atque cumque officiis quisquam?
+                        Eius temporibus molestiae totam! A voluptates aspernatur id quibusdam in ipsum aut temporibus voluptatum voluptatibus similique rerum expedita quas mollitia, facere fugit, reiciendis doloremque et nulla? Cupiditate neque possimus dolor
+                        </p>
                     </div>
                 </article>
                 
                 <article class="card ">
                     <a href="#">
-                        <div class="gradient_base_deep anim_deep"></div>
+                        <div class="gradient-block gradient-block__colors"></div>
                     </a>
                     <div class="card__content flow">
-                        <p class="category-wrapper">
-                            <a href="/category/css" class="category">dolor</a>
+                        <p class="card__category">
+                            <a href="/category/css" class="category">ipsum</a>
                         </p>
                         <h3 class="card__heading">
-                            <a href="/blog/">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error debitis quidem repellendus cumque!</a>
+                            <a href="/blog/">Lorem ipsum&nbsp;dolor sit amet consectetur adipisicing elit</a> <!-- Lorem ipsum&nbsp;dolor sit amet  -->
                         </h3>
-                        <p class="card__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur exercitationem molestiae dolor a, ea, sapiente nesciunt laudantium modi, saepe quis dolore est laboriosam? Quas possimus suscipit facere vel atque.</p>
+                        <p class="card__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequuntur amet doloremque repellat enim quisquam id! Laborum rem necessitatibus itaque commodi tempora, accusantium ea fugit totam, sint omnis blanditiis quae?</p>
                     </div>
                 </article>
                 
                 <article class="card ">
                     <a href="#">
-                        <div class="gradient_base_deep anim_deep"></div>
+                        <div class="gradient-block gradient-block__colors"></div>
                     </a>
                     <div class="card__content flow">
-                        <p class="category-wrapper">
+                        <p class="card__category">
                             <a href="/category/css" class="category">ipsum</a>
                         </p>
                         <h3 class="card__heading">
                             <a href="/blog/">Lorem ipsum&nbsp;dolor sit amet</a> <!-- Lorem ipsum&nbsp;dolor sit amet  -->
                         </h3>
-                        <p class="card__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequuntur amet doloremque repellat enim quisquam id! Laborum rem necessitatibus itaque commodi tempora, accusantium ea fugit totam, sint omnis blanditiis quae?</p>
+                        <p class="card__summary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor ipsum consequuntur repudiandae soluta dolore voluptas nihil corrupti ab cum reiciendis corporis, assumenda pariatur officia similique atque cumque officiis quisquam?
+                        Eius temporibus molestiae totam! A voluptates aspernatur id quibusdam in ipsum aut temporibus voluptatum voluptatibus similique rerum expedita quas mollitia, facere fugit, reiciendis doloremque et nulla? 
+                        </p>
                     </div>
                 </article>
 
-
                 <article class="card ">
                     <a href="#">
-                        <img src="./img/colors/red-380x430.jpg" alt="Imagen de ejemplo">
+                        <img class="card__image" src="./img/colors/red-380x430.jpg" alt="Imagen de ejemplo">
                     </a>
                     <div class="card__content flow">
-                        <p class="category-wrapper">
+                        <p class="card__category">
                             <a href="/category/css" class="category">Lorem</a>
                         </p>
                         <h3 class="card__heading">
@@ -128,10 +137,10 @@
 
                 <article class="card ">
                     <a href="#">
-                        <img src="./img/colors/red-380x430.jpg" alt="Imagen de ejemplo">
+                        <img class="card__image" src="./img/colors/3d-color-system-380x430.png" alt="Imagen de ejemplo">
                     </a>
                     <div class="card__content flow">
-                        <p class="category-wrapper">
+                        <p class="card__category">
                             <a href="/category/css" class="category">ipsum</a>
                         </p>
                         <h3 class="card__heading">
@@ -143,10 +152,10 @@
 
                 <article class="card ">
                     <a href="#">
-                        <img src="./img/colors/red-380x430.jpg" alt="Imagen de ejemplo">
+                        <img class="card__image"  src="./img/colors/red-380x430.jpg" alt="Imagen de ejemplo">
                     </a>
                     <div class="card__content flow">
-                        <p class="category-wrapper">
+                        <p class="card__category">
                             <a href="/category/css" class="category">dolor</a>
                         </p>
                         <h3 class="card__heading">

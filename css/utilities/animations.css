@@ -1,0 +1,11 @@
+/* @keyframes gradientAnimation {
+    0% { background-position: 0% 100%;}
+    60% {background-position: 0% 60%;}
+    100% {background-position: 0% 20%; }
+} */
+
+/* @keyframes gradientAnimation {
+    0% { background-position: 0% 0%;}
+    60% {background-position: 100% 60%;}
+    100% {background-position: 0% 100%; }
+} */

@@ -1,0 +1,50 @@
+/* components/_card.css */
+.card {
+    max-width: 380px;
+    margin-inline: auto;
+    background-color: var(--color-white);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .card a {pointer-events: none;} /* ! */
+  
+  .card__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    vertical-align: top;
+  }
+  
+  .card__content {
+    margin-block-start: var(--space-2xs);
+    padding-inline: calc(var(--gutter) / 2);
+    padding-block-end: var(--space-2xs);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card__category {
+    font-family: var(--font-logos);
+    font-size: var(--size-step--4);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin-block-start: var(--flow-space, 1em);
+  }
+  
+  .card__heading {
+    font-family: var(--font-local-ligatures);
+    font-feature-settings: "liga", "dlig";
+    font-size: var(--size-step-2);
+  }
+  
+  .card__summary {
+    font-family: var(--font-base);
+    font-size: var(--size-step--3);
+    font-weight: 300;
+  }

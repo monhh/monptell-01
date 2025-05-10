@@ -371,6 +371,7 @@
 @layer components {
     /* Header */
     /* components/_header.css */
+
     .header {
         display: flex;
         align-items: center;
@@ -379,11 +380,29 @@
         padding: var(--space-2xs);
         color: var(--color-muted);
         margin-inline: auto; /* ? */
+
+        /* 590. org 66em=1056px */
+        @media (min-width: 36.875em) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            padding: var(--space-xs);
+            max-width: calc(var(--gutter) + 2 * 380px);
+        }
+
+        /* =1102. org 90em=1440px */
+        @media (min-width: 68.875em) {
+            display: flex;
+            padding: var(--space-s);
+            /* max-width from the 36.875em breakpoint will still apply */
+            /* Base align-items:center and justify-content:center for flex will re-apply */
+        }
     }
 
     .header a {
-        pointer-events: none;
-    } /* ! */
+        pointer-events: none; /* ! */
+    }
 
     .header__logo {
         font-family: var(--font-logos);
@@ -398,24 +417,6 @@
         cursor: pointer;
         fill: var(--color-muted);
         z-index: 200;
-    }
-    /* 590. org 66em=1056px */
-    @media (min-width: 36.875em) {
-        .header {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            justify-items: center;
-            padding: var(--space-xs);
-            max-width: calc(var(--gutter) + 2 * 380px);
-        }
-    }
-    /* =1102. org 90em=1440px */
-    @media (min-width: 68.875em) {
-        .header {
-            display: flex;
-            padding: var(--space-s);
-        }
     }
 
     /* Card */

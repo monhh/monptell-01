@@ -5,13 +5,15 @@ body {
     line-height: var(--leading);
 
     font-size-adjust: from-font;
-    font-feature-settings: "csp" on;
+    /* font-feature-settings: "csp" on; */
+    font-feature-settings: "smcp" on;
     font-optical-sizing: auto;
 }
 
 h1, h2, h3, h4 {
     font-family: var(--ff-sans);
-    font-feature-settings: "cpsp" on;
+    /* font-feature-settings: "cpsp" on; */
+    font-feature-settings: "smcp" on;
     font-weight: var(--heading-font-weight,var(--font-bold));
     letter-spacing: var(--heading-kerning,var(--kerning));
     line-height: var(--heading-line-height,var(--leading-fine));

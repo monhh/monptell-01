@@ -1,6 +1,0 @@
-.wrapper {
-    margin-inline: auto;
-    max-width: var(--wrapper-max-width);/* 1680px */
-    padding-inline: var(--gutter-wrapper-inline,var(--gutter));
-    /* position: relative; */
-}

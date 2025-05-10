@@ -398,25 +398,26 @@
             /* max-width from the 36.875em breakpoint will still apply */
             /* Base align-items:center and justify-content:center for flex will re-apply */
         }
-    }
 
-    .header a {
-        pointer-events: none; /* ! */
-    }
+        a {
+            pointer-events: none; /* ! */
+        }
 
-    .header__logo {
+        & .logo {
         font-family: var(--font-logos);
         font-size: var(--size-step-4);
         font-weight: 500;
         z-index: 200;
-    }
+        }
 
-    .header__menu-icon {
-        width: var(--size-step-4);
-        height: auto;
-        cursor: pointer;
-        fill: var(--color-muted);
-        z-index: 200;
+        & .hamburger {
+            width: var(--size-step-4);
+            height: auto;
+            cursor: pointer;
+            fill: var(--color-muted);
+            z-index: 200;
+        } 
+
     }
 
     /* Card */

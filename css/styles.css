@@ -399,9 +399,9 @@
             /* Base align-items:center and justify-content:center for flex will re-apply */
         }
 
-        a {
-            pointer-events: none; /* ! */
-        }
+        /* a {
+            pointer-events: none;
+        } */
 
         & .logo {
         font-family: var(--font-logos);
@@ -430,9 +430,11 @@
         border-radius: var(--radius);
         overflow: hidden;
 
-        a {
-            pointer-events: none; /* ! */
-        }
+        /* a {
+            pointer-events: none; 
+        } */
+
+        transition: opacity 3s ease;
 
         & .image {
             width: 100%;
@@ -465,6 +467,8 @@
             font-family: var(--font-local-ligatures);
             font-feature-settings: "liga", "dlig";
             font-size: var(--size-step-2);
+
+            pointer-events: none; 
         }
 
         & .summary {

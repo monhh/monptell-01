@@ -416,7 +416,14 @@
             cursor: pointer;
             fill: var(--color-muted);
             z-index: 200;
+
+            transition: transform 0.3s ease;
         } 
+
+        & .hamburger rect {
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
 
     }
 
@@ -596,12 +603,23 @@
         .link:nth-child(4) {
             transition: all 0.3s 0.6s;
         }
-        .link:nth-child(5) {
-            transition: all 0.3s 0.7s;
+
+        /* cambiar diseño de hamburger a close */
+        .hamburger {
+            transform: rotate(180deg);
         }
-        .link:nth-child(6) {
-            transition: all 0.3s 0.8s;
+        .hamburger rect:nth-child(1) {
+            transform: translateY(30px) rotate(45deg);
+            width: 100%;
         }
+        .hamburger rect:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger rect:nth-child(3) {
+            transform: translateY(-30px) rotate(-45deg);
+            width: 100%;
+        }
+
     }
 
 }

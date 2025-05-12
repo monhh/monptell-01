@@ -403,14 +403,14 @@
             pointer-events: none;
         } */
 
-        & .logo {
-        font-family: var(--font-logos);
-        font-size: var(--size-step-4);
-        font-weight: 500;
-        z-index: 200;
+        .logo {
+            font-family: var(--font-logos);
+            font-size: var(--size-step-4);
+            font-weight: 500;
+            z-index: 200;
         }
 
-        & .hamburger {
+        .hamburger {
             width: var(--size-step-4);
             height: auto;
             cursor: pointer;
@@ -418,12 +418,12 @@
             z-index: 200;
 
             transition: transform 0.3s ease;
-        } 
 
-        & .hamburger rect {
-            transition: all 0.3s ease;
-            transform-origin: center;
-        }
+            & rect {
+                transition: all 0.3s ease;
+                transform-origin: center;
+            }
+        } 
 
     }
 
@@ -581,6 +581,7 @@
     /* Anidar todas las reglas de .active dentro de un bloque principal */
 
     .active {
+        
         .overlay {
             transform: translateY(0);
         }
@@ -588,36 +589,34 @@
         .link {
             opacity: 1;
             visibility: visible;
-        }
 
-        /* Transiciones anidadas */
-        .link:nth-child(1) {
-            transition: all 0.3s 0.3s;
-        }
-        .link:nth-child(2) {
-            transition: all 0.3s 0.4s;
-        }
-        .link:nth-child(3) {
-            transition: all 0.3s 0.5s;
-        }
-        .link:nth-child(4) {
-            transition: all 0.3s 0.6s;
+            &:nth-child(1) {
+                transition: all 0.3s 0.3s;
+            }
+            &:nth-child(2) {
+                transition: all 0.3s 0.4s;
+            }
+            &:nth-child(3) {
+                transition: all 0.3s 0.5s;
+            }
+            &:nth-child(4) {
+                transition: all 0.3s 0.6s;
+            }
         }
 
         /* cambiar diseño de hamburger a close */
         .hamburger {
             transform: rotate(180deg);
-        }
-        .hamburger rect:nth-child(1) {
-            transform: translateY(30px) rotate(45deg);
-            width: 100%;
-        }
-        .hamburger rect:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger rect:nth-child(3) {
-            transform: translateY(-30px) rotate(-45deg);
-            width: 100%;
+
+            & rect:nth-child(1) {
+                transform: translateY(35px) rotate(45deg);
+            }
+            & rect:nth-child(2) {
+                opacity: 0;
+            }
+            & rect:nth-child(3) {
+                transform: translateY(-35px) rotate(-45deg);
+            }
         }
 
     }

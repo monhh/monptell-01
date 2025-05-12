@@ -306,7 +306,7 @@
 @layer base {
     body {
         margin: 0;
-        min-height: 100vh;
+        min-height: 100vh; /* svh ? */
         overflow-x: hidden;
 
         background-color: var(--color-bg);

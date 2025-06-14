@@ -81,11 +81,17 @@
 }
 
 @layer variables {
-    @font-face {
+    /* @font-face {
         font-family: "Valentina-Regular";
         src: url("/fonts/Valentina-Regular.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
+    } */
+
+    @font-face {
+        font-family: "ValentinaLocal";
+        src: url("/fonts/RobotoMono-Regular-subset.woff2") format("woff2"),
+             url("/fonts/valentina-regular-webfont.woff") format("woff");
     }
 
     :root {
@@ -132,7 +138,7 @@
             "URW Bookman L", serif;
         --font-mono: "Roboto Mono", ui-monospace, monospace;
 
-        --font-local-ligatures: "Valentina-Regular", serif;
+        --font-local-ligatures: "ValentinaLocal", serif;
         --font-logos: "Montserrat", sans-serif;
         --font-base: "Nunito", sans-serif;
 
@@ -370,8 +376,6 @@
 
 @layer components {
     /* Header */
-    /* components/_header.css */
-
     .header {
         display: flex;
         align-items: center;
@@ -428,7 +432,6 @@
     }
 
     /* Card -------------------------------------------------------------- */
-    /* components/_card.css */
     .card {
         max-width: 380px;
         margin-inline: auto;
@@ -546,7 +549,6 @@
     }
 
     /* Overlay Nav ------------------------------------------------------------- */
-    /* components/_overlay-nav.css */
     .overlay {
         content: "";
         position: absolute;
@@ -581,7 +583,7 @@
     /* Anidar todas las reglas de .active dentro de un bloque principal */
 
     .active {
-        
+
         .overlay {
             transform: translateY(0);
         }

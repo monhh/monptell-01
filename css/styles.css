@@ -1,4 +1,4 @@
-@layer reset, variables, typography, base, layouts, components, utilities;
+/* @layer reset, variables, typography, base, layouts, components, utilities; */
 
 @layer reset {
     html {
@@ -90,7 +90,7 @@
 
     @font-face {
         font-family: "ValentinaLocal";
-        src: url("/fonts/RobotoMono-Regular-subset.woff2") format("woff2"),
+        src: url("/fonts/valentina-regular-webfont.woff2") format("woff2"),
              url("/fonts/valentina-regular-webfont.woff") format("woff");
     }
 
@@ -136,7 +136,7 @@
         /* fonts org  */
         --font-accent: "Family", "Georgia Pro", Georgia, "URW Bookman",
             "URW Bookman L", serif;
-        --font-mono: "Roboto Mono", ui-monospace, monospace;
+        /* --font-mono: "Roboto Mono", ui-monospace, monospace; */
 
         --font-local-ligatures: "ValentinaLocal", serif;
         --font-logos: "Montserrat", sans-serif;
@@ -275,7 +275,7 @@
 
         font-size-adjust: from-font;
         /* font-feature-settings: "csp" on; */
-        font-feature-settings: "smcp" on;
+        /* font-feature-settings: "smcp" on; */
         font-optical-sizing: auto;
     }
 
@@ -285,7 +285,7 @@
     h4 {
         font-family: var(--ff-sans);
         /* font-feature-settings: "cpsp" on; */
-        font-feature-settings: "smcp" on;
+        /* font-feature-settings: "smcp" on; */
         font-weight: var(--heading-font-weight, var(--font-bold));
         letter-spacing: var(--heading-kerning, var(--kerning));
         line-height: var(--heading-line-height, var(--leading-fine));
@@ -476,6 +476,7 @@
         & .heading {
             font-family: var(--font-local-ligatures);
             font-feature-settings: "liga", "dlig";
+            /* font-variant-ligatures: common-ligatures discretionary-ligatures; */
             font-size: var(--size-step-2);
 
             pointer-events: none; 

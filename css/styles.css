@@ -81,6 +81,18 @@
 }
 
 @layer variables {
+
+    @font-face {
+        font-family: "MontserratLocal";
+        src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: "NunitoLocal";
+        src: url("/fonts/Nunito-Light.woff2") format("woff2");
+    }
+
+
     /* @font-face {
         font-family: "Valentina-Regular";
         src: url("/fonts/Valentina-Regular.ttf") format("truetype");
@@ -139,8 +151,8 @@
         /* --font-mono: "Roboto Mono", ui-monospace, monospace; */
 
         --font-local-ligatures: "ValentinaLocal", serif;
-        --font-logos: "Montserrat", sans-serif;
-        --font-base: "Nunito", sans-serif;
+        --font-logos: "MontserratLocal", sans-serif;
+        --font-base: "NunitoLocal", sans-serif;
 
         --font-normal: 400;
         --font-medium: 500;
